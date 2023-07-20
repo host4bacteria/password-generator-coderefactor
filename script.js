@@ -15,10 +15,10 @@ function generatePassword() {
     alert("INVALID CHARACTER COUNT");
     return null;
   }
-  var hasUppercase = confirm("Click 'OKAY' to include uppercase characters");
-  var hasLowercase = confirm("Click 'OKAY' to include lowercase characters");
-  var hasNumbers = confirm("Click 'OKAY' to include number characters");
-  var hasSpecialchar = confirm("Click 'OKAY' to include special characters");
+  var hasUppercase = confirm("Click 'OK' to include uppercase characters");
+  var hasLowercase = confirm("Click 'OK' to include lowercase characters");
+  var hasNumbers = confirm("Click 'OK' to include number characters");
+  var hasSpecialchar = confirm("Click 'OK' to include special characters");
   if (!hasUppercase && !hasLowercase && !hasNumbers && !hasSpecialchar) {
     alert("MUST PICK AT LEAST ONE CHARACTER TYPE");
     return null;
