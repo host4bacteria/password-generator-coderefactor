@@ -2,8 +2,10 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var specialchar = "$%!&@";
-var userChosen = "";
-var password = "";
+
+  function generatePassword() {
+  var passwordlength = prompt()
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
