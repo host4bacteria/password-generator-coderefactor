@@ -1,7 +1,11 @@
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var numbers = "0123456789";
-var specialchar = "$%!&@";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowercase = "abcdefghijklmnopqrstuvwxyz"
+var numbers = "0123456789"
+var specialchar = "$%!&@"
+
+var userChosen = ""
+var password = ""
+
 
 function generatePassword() {
   var passwordlength = prompt("How long would you like your password to be? MAX:128 CHARACTERS MIN:8 CHARACTERS")
@@ -18,9 +22,29 @@ if ( !hasUppercase && !hasLowercase && !hasNumbers && !hasSpecialchar) {
     return
 }
 if (hasUppercase) {
-userChosen += u
+userChosen += uppercase
 }
+if (hasLowercase) {
+  userChosen += lowercase
 }
+if (hasSpecialchar) {
+  userChosen += specialchar
+}
+if (hasNumbers) {
+  userChosen += numbers
+}
+for (var i = 0; i < passwordlength; i ++) {
+  var index = Math.floor(Math.random()*userChosen.length)
+  password += userChosen.charAt(index)
+}
+  
+ return password
+
+}
+
+
+
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
